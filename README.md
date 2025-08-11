@@ -108,17 +108,22 @@ pip install torch torchvision opencv-python matplotlib numpy kagglehub
 
 ```
 ##  Results
-| <img src="Entrenamiento.jpeg" width="650px"> |
+
 During model training, the following results were obtained:
 - Loss: 0.05 in both the training and validation sets, indicating stable convergence with no signs of overfitting.
 - Dice coefficient: 87% in training and validation, showing a high overlap between the model predictions and the actual masks.
 - Intersection over Union (IoU): 77% in training and 78% in validation, confirming consistent and accurate segmentation in both sets.
 
-| <img src="Resultados.jpg" width="650px"> |
+| Performance metrics |
+|:-:|
+| <img src="Entrenamiento.jpeg" width="650px"> |
+
 These results reflect a well-generalized model, capable of segmenting tumors with high accuracy and without significant loss of performance between training and validation data.
 
+| Examples of predictions |
+|:-:|
+| <img src="Resultados.jpg" width="650px"> |
 
-| <img src="Erroneos2.jpg" width="650px"> |
 These are three specific cases in which the model failed to classify correctly:
 - Cases 1 and 2: No prediction mask was generated.
 - Case 3: The mask generated was incorrect and did not correspond to the actual tumor region.
@@ -127,3 +132,9 @@ Possible causes identified:
 - Loss of information due to channel reduction: In the third case, the use of only one of the four layers available in the original dataset likely limited the contextual information, affecting tumor detection.
 - Difficulty in detecting small tumors: It was observed that the smaller the tumor size, the more difficult it was for the model to identify it accurately. This was evident in both the first and third erroneous images.
 In summary, the errors seem to be mainly linked to the diversity and quality of the dataset, as well as the loss of structural information during preprocessing.
+
+| Error cases |
+|:-:|
+| <img src="Erroneos2.jpg" width="650px"> |
+
+
