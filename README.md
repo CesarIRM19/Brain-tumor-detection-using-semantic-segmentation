@@ -1,8 +1,4 @@
 # Brain Tumor Semantic Segmentation with U-Net (PyTorch)
-Use of deep learning techniques for semantic segmentation of brain tumors in medical images using magnetic resonance imaging (MRI) data from a public dataset such as BRATS, available on platforms such as Kaggle.
-
-
-
 ## 📌 Goal
 
 The aim of this project is to apply deep learning techniques for the **semantic segmentation of brain tumors** in medical imaging using **Magnetic Resonance Imaging (MRI)** data from the [BraTS 2020 dataset](https://www.kaggle.com/datasets/awsaf49/brats2020-training-data).  
@@ -97,24 +93,6 @@ Where:
 
 ---
 
-## 📝 Assessment Criteria
-
-### **Grade ≤ 6**
-- Load & preprocess the FLAIR modality and binary masks.
-- Implement a functional U-Net (or similar).
-- Train the model & obtain predictions on validation/test set.
-
-### **Grade ≤ 8** (plus previous)
-- Generate qualitative results overlaying masks on original MRI slices.
-- Apply **data augmentation** (random flips, rotations, elastic deformations).
-
-### **Grade ≤ 10** (plus previous)
-- Evaluate with Dice & IoU metrics.
-- Plot Dice & IoU scores for test set.
-- Analyze **3+ failure cases** and discuss error sources.
-
----
-
 ## ⚙️ Requirements
 
 - Python 3.8+
@@ -126,5 +104,5 @@ Where:
 
 Install dependencies:
 ```bash
-pip install torch torchvision opencv-python matplotlib numpy kaggle
+pip install torch torchvision opencv-python matplotlib numpy kagglehub
 
